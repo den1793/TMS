@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * @author Denis Smirnov
  */
-public class lesson5 {
+public class Lesson5 {
     ConsoleWriter consoleWriter = new ConsoleWriter();
 
     public void point1() {

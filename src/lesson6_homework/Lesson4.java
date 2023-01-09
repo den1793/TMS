@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Denis Smirnov
  */
-public class lesson4 {
+public class Lesson4 {
 
     ConsoleWriter consoleWriter = new ConsoleWriter();
 

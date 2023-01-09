@@ -9,9 +9,9 @@ public class Main {
         ConsoleReader consoleReader = new ConsoleReader();
         ConsoleWriter consoleWriter = new ConsoleWriter();
 
-        lesson3 lesson3 = new lesson3();
-        lesson4 lesson4 = new lesson4();
-        lesson5 lesson5 = new lesson5();
+        Lesson3 lesson3 = new Lesson3();
+        Lesson4 lesson4 = new Lesson4();
+        Lesson5 lesson5 = new Lesson5();
 
         lesson3.calculator();
         lesson3.loops();

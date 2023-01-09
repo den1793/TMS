@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * @author Denis Smirnov
  */
-public class lesson3 {
+public class Lesson3 {
     ConsoleWriter consoleWriter = new ConsoleWriter();
     ConsoleReader consoleReader = new ConsoleReader();
 
