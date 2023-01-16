@@ -1,4 +1,4 @@
-package lesson7_homework;
+package lesson8_homework;
 
 /**
  * @author Denis Smirnov
