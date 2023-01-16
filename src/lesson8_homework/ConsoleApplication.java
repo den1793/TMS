@@ -5,10 +5,10 @@ package lesson8_homework;
  */
 public class ConsoleApplication implements Application {
 
-    OperationStorage storage = new InMemoryOperationStorage();
-    Calculator calculator = new Calculator();
-    Reader reader = new ConsoleReader();
-    Writer writer = new ConsoleWriter();
+    private final OperationStorage storage = new InMemoryOperationStorage();
+    private final Calculator calculator = new Calculator();
+    private final Reader reader = new ConsoleReader();
+    private final Writer writer = new ConsoleWriter();
 
     @Override
     public void run() {
@@ -33,7 +33,7 @@ public class ConsoleApplication implements Application {
                 case "y":
                     break;
                 case "n":
-                    System.out.println("Program completed");
+                    writer.write("Program completed");
                     return;
                 default:
                     isTrue = false;

@@ -5,8 +5,8 @@ package lesson8_homework;
  */
 public class InMemoryOperationStorage implements OperationStorage {
 
-    Operation[] operations = new Operation[10];
-    Operation[] temp = new Operation[operations.length + 1];
+     private final Operation[] operations = new Operation[10];
+     private final Operation[] temp = new Operation[operations.length + 1];
     private int countOperations = 0;
 
 
@@ -41,7 +41,7 @@ public class InMemoryOperationStorage implements OperationStorage {
     public Operation[] findAll() {
         return operations;
     }
-
+    @Override
     public int getCountOperations(){
         return this.countOperations;
     }
