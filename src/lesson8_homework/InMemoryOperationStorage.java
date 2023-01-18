@@ -7,8 +7,7 @@ public class InMemoryOperationStorage implements OperationStorage {
 
      private final Operation[] operations = new Operation[10];
      private final Operation[] temp = new Operation[operations.length + 1];
-    private int countOperations = 0;
-
+     private int countOperations = 0;
 
     public void save(Operation operation) {
 
@@ -33,7 +32,6 @@ public class InMemoryOperationStorage implements OperationStorage {
         for (int i = 0; i < operations.length; i++) {
             temp[i + 1] = operations[i];
             operations[i] = temp[i];
-
         }
     }
 
