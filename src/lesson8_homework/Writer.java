@@ -5,7 +5,6 @@ package lesson8_homework;
  */
 
     public interface Writer {
-
         Operation write(String message);
 
 

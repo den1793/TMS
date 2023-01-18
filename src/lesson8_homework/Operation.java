@@ -5,9 +5,9 @@ package lesson8_homework;
  */
 public class Operation {
 
-    private double num1;
-    private double num2;
-    private String type;
+    private final double num1;
+    private final double num2;
+    private final String type;
     private double result;
 
     public Operation(double num1, double num2, String type) {
