@@ -6,9 +6,7 @@ package lesson8_homework;
 public interface OperationStorage {
 
     void save(Operation operation);
-
     Operation[] findAll();
-
     int getCountOperations();
 
 }

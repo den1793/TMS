@@ -10,16 +10,16 @@ public class Calculator {
     Operation calculate(Operation operation) {
 
         switch (operation.getType()) {
-            case "sum":
+            case SUM:
                 operation.setResult(operation.getNum1() + operation.getNum2());
                 return operation;
-            case "sub":
+            case SUB:
                 operation.setResult(operation.getNum1() - operation.getNum2());
                 return operation;
-            case "mul":
+            case MUL:
                 operation.setResult(operation.getNum1() * operation.getNum2());
                 return operation;
-            case "div":
+            case DIV:
                 operation.setResult(operation.getNum1() / operation.getNum2());
                 return operation;
         }

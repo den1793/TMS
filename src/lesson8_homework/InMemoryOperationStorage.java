@@ -27,14 +27,12 @@ public class InMemoryOperationStorage implements OperationStorage {
         }
         countOperations++;
     }
-
     private void moveRight (Operation[] operations) {
         for (int i = 0; i < operations.length; i++) {
             temp[i + 1] = operations[i];
             operations[i] = temp[i];
         }
     }
-
     @Override
     public Operation[] findAll() {
         return operations;
