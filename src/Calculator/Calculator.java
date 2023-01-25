@@ -5,9 +5,7 @@ package Calculator;
  */
 public class Calculator {
 
-    Writer writer = new ConsoleWriter();
-
-    Operation calculate(Operation operation) {
+    public Operation calculate(Operation operation) {
 
         switch (operation.getType()) {
             case SUM:
