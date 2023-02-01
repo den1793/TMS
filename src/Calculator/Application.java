@@ -5,5 +5,5 @@ package Calculator;
  */
 public interface Application {
 
-    public void run();
+    public void run() ;
 }
