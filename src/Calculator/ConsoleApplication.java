@@ -23,10 +23,9 @@ public class ConsoleApplication implements Application {
             writer.write("Enter the second number: ");
             double num2 = reader.readDouble();
             OperationType type = selector.select();
-
             Operation op = new Operation(num1, num2, type);
-            Operation result = calculator.calculate(op);
 
+            Operation result = calculator.calculable.calculate(op);
             try {
                 storageFile.save(result); // - сохранение в файл
             } catch (IOException e) {

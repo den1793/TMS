@@ -1,11 +1,12 @@
 package Calculator;
+import static Calculator.OperationType.*;
 
 /**
  * @author Denis Smirnov
  */
 public class Calculator {
 
-    public Operation calculate(Operation operation) {
+    public Calculable calculable = (operation) -> {
 
         switch (operation.getType()) {
             case SUM:
@@ -22,5 +23,7 @@ public class Calculator {
                 return operation;
         }
         return operation;
-    }
+    };
+
 }
+
