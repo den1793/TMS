@@ -24,7 +24,6 @@ public class Operation implements Serializable {
         this.type = OperationType.valueOf(type);
         this.result = result;
     }
-
     public double getNum1() {
         return num1;
     }
