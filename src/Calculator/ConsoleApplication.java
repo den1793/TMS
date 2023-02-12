@@ -25,13 +25,13 @@ public class ConsoleApplication implements Application {
             OperationType type = selector.select();
             Operation op = new Operation(num1, num2, type);
 
-            Operation result = calculator.calculable.calculate(op);
+            Operation result = calculator.calculate(op) ;
             try {
-                storageFile.save(result); // - сохранение в файл
+                storageFile.save(result);
             } catch (IOException e) {
-                writer.write("Error");
+                writer.write("Error, file not found");
+                continue;
             }
-            //storage.save(result); - сохранение в List
             writer.write("Your result = " + result.getResult());
             writer.write("");
 
@@ -52,11 +52,11 @@ public class ConsoleApplication implements Application {
             switch (next2) {
                 case "1":
                     try {
-                        printFileHistory((FileOperationStorage) storageFile); // - вывод из файла
+                        printFileHistory((FileOperationStorage) storageFile);
                     } catch (IOException e) {
-                        writer.write("Error");
+                        writer.write("Error, operations not found");
+                        continue;
                     }
-                    //printHistory((InMemoryOperationStorage) storage); - вывод из List
                     break;
                 case "2":
                     break;
@@ -65,18 +65,12 @@ public class ConsoleApplication implements Application {
             }
         }
     }
-    public void printFileHistory(FileOperationStorage storageFile) throws IOException {
+    private void printFileHistory(FileOperationStorage storageFile) throws IOException {
         for (Operation operation : storageFile.findAll()) {
             writer.write(operation.toString());
         }
-    }
-    public void printHistory(InMemoryOperationStorage storage) {
-        for (Operation operation : storage.findAll()) {
-            writer.write(operation.toString());
-        }
-    }
 
-
+    }
 }
 
 

@@ -13,6 +13,7 @@ public class ConsoleSelection {
             writer.write("Enter the operation type: \n " +
                     "1 - summation, 2 - subtraction, 3 - multiplication, 4 - division ");
             String type = reader.readString();
+
             switch (type) {
                 case "1":
                     operationType = OperationType.SUM;
