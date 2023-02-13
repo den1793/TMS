@@ -63,7 +63,7 @@ public class ConsoleApplication implements Application {
         }
     }
     private void printFileHistory(List<Operation> operations) throws IOException {
-        for (Operation operation : storage.findAll()) {
+        for (Operation operation : operations) {
             writer.write(operation.toString());
         }
 
