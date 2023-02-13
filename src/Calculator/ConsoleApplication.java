@@ -1,7 +1,6 @@
 package Calculator;
-
-import javax.imageio.IIOException;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author Denis Smirnov
@@ -11,9 +10,7 @@ public class ConsoleApplication implements Application {
     private final Reader reader = new ConsoleReader();
     private final Writer writer = new ConsoleWriter();
     private final ConsoleSelection selector = new ConsoleSelection();
-
-    private final OperationStorage storage = new InMemoryOperationStorage();
-    private final OperationStorage storageFile = new FileOperationStorage();
+    private final OperationStorage storage = new FileOperationStorage();
 
     @Override
     public void run() {
@@ -27,7 +24,7 @@ public class ConsoleApplication implements Application {
 
             Operation result = calculator.calculate(op) ;
             try {
-                storageFile.save(result);
+                storage.save(result);
             } catch (IOException e) {
                 writer.write("Error, file not found");
                 continue;
@@ -52,7 +49,7 @@ public class ConsoleApplication implements Application {
             switch (next2) {
                 case "1":
                     try {
-                        printFileHistory((FileOperationStorage) storageFile);
+                        printFileHistory(storage.findAll());
                     } catch (IOException e) {
                         writer.write("Error, operations not found");
                         continue;
@@ -65,8 +62,8 @@ public class ConsoleApplication implements Application {
             }
         }
     }
-    private void printFileHistory(FileOperationStorage storageFile) throws IOException {
-        for (Operation operation : storageFile.findAll()) {
+    private void printFileHistory(List<Operation> operations) throws IOException {
+        for (Operation operation : storage.findAll()) {
             writer.write(operation.toString());
         }
 

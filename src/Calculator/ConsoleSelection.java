@@ -15,21 +15,10 @@ public class ConsoleSelection {
             String type = reader.readString();
 
             switch (type) {
-                case "1":
-                    operationType = OperationType.SUM;
-                    break;
-                case "2":
-                    operationType = OperationType.SUB;
-                    break;
-                case "3":
-                    operationType = OperationType.MUL;
-                    break;
-                case "4":
-                    operationType = OperationType.DIV;
-                    break;
-                default:
-                    writer.write("Invalid operation");
-                    break;
+                case "1" -> operationType = OperationType.SUM;
+                case "2" -> operationType = OperationType.SUB;
+                case "3" -> operationType = OperationType.MUL;
+                case "4" -> operationType = OperationType.DIV;
             }
         return operationType;
     }
