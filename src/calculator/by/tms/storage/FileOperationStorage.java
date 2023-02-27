@@ -1,5 +1,9 @@
-package Calculator;
-import java.io.*;
+package calculator.by.tms.storage;
+import calculator.by.tms.entity.Operation;
+import java.io.BufferedReader;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,18 +13,18 @@ import java.util.List;
  */
 public class FileOperationStorage implements OperationStorage {
 
-    public void save(Operation operation) throws IOException  {
+    public void save(Operation operation) throws IOException {
         String result = String.format("%s,%s,%s,%s",
                 operation.getNum1(),
                 operation.getNum2(),
                 operation.getResult(),
                 operation.getType());
 
-       FileOutputStream fileOutputStream = new  FileOutputStream("history.csv", true);
+        FileOutputStream fileOutputStream = new  FileOutputStream("history.csv", true);
 
-            fileOutputStream.write(result.getBytes());
-            fileOutputStream.write(10);
-            fileOutputStream.close();
+        fileOutputStream.write(result.getBytes());
+        fileOutputStream.write(10);
+        fileOutputStream.close();
 
 
     }
@@ -36,7 +40,7 @@ public class FileOperationStorage implements OperationStorage {
 
             operations.add(convertToOperation(line));
 
-           }
+        }
 
         return new ArrayList<>(operations);
     }

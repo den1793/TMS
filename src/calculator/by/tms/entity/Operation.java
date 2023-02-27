@@ -1,11 +1,9 @@
-package Calculator;
-
-import java.io.Serializable;
+package calculator.by.tms.entity;
 
 /**
  * @author Denis Smirnov
  */
-public class Operation implements Serializable {
+public class Operation {
 
     private final double num1;
     private final double num2;
@@ -17,13 +15,12 @@ public class Operation implements Serializable {
         this.num2 = num2;
         this.type = type;
     }
-
-    public Operation(double num1, double num2, double result, String type) {
-        this.num1 = num1;
-        this.num2 = num2;
-        this.type = OperationType.valueOf(type);
-        this.result = result;
-    }
+     public Operation(double num1, double num2, double result, String type) {
+         this.num1 = num1;
+         this.num2 = num2;
+         this.type = OperationType.valueOf(type);
+         this.result = result;
+     }
     public double getNum1() {
         return num1;
     }

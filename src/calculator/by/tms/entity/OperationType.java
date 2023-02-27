@@ -1,4 +1,4 @@
-package Calculator;
+package calculator.by.tms.entity;
 
 /**
  * @author Denis Smirnov
