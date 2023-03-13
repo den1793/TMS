@@ -20,6 +20,10 @@ public class ConsoleReader implements Reader {
     }
 
     @Override
+    public int readInt() { return scanner.nextInt(); }
+
+
+    @Override
     public OperationType readOperationType() throws OperationNotFoundException {
         String next = scanner.next();
         String operation = next.trim().toUpperCase();
@@ -30,9 +34,5 @@ public class ConsoleReader implements Reader {
             }
         }
         throw new OperationNotFoundException("Invalid operation");
-
     }
-
-
-
 }

@@ -8,5 +8,6 @@ public interface Reader {
 
     String readString();
     double readDouble();
+    int readInt();
     OperationType readOperationType() throws OperationNotFoundException;
 }

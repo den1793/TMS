@@ -10,4 +10,5 @@ public interface OperationStorage {
 
     void save(Operation operation) throws IOException;
     List<Operation> findAll() throws IOException;
+
 }

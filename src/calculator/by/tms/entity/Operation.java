@@ -9,6 +9,8 @@ public class Operation {
     private final double num2;
     private double result;
     private final OperationType type;
+    private int id;
+
 
     public Operation(double num1, double num2, OperationType type) {
         this.num1 = num1;
@@ -21,6 +23,15 @@ public class Operation {
          this.type = OperationType.valueOf(type);
          this.result = result;
      }
+
+    public Operation(int id, double num1, double num2, String type, double result) {
+        this.id = id;
+        this.num1 = num1;
+        this.num2 = num2;
+        this.type = OperationType.valueOf(type);
+        this.result = result;
+    }
+
     public double getNum1() {
         return num1;
     }
@@ -41,12 +52,15 @@ public class Operation {
         this.result = result;
     }
 
+    @Override
     public String toString() {
-        return "Operations{" +
-                "num1=" + num1 +
-                ", num2=" + num2 +
-                ", result=" + result +
-                ", type='" + type + '\'' +
+        return "Operation{" +
+                "id = " + id +
+                ", num1 = " + num1 +
+                ", num2 = " + num2 +
+                ", result = " + result +
+                ", type = " + type +
+                ", id = " + id +
                 '}';
     }
 }
